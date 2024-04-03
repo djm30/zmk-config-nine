@@ -20,41 +20,103 @@
 /* Layers */
 #define AL1 0
 #define AL2 1
-#define SM1 2
-#define SM2 3
-#define NUM 4
-#define SYS 5
-#define BT 6
-#define FUN 7
+#define A2U 2
+#define SM1 3
+#define SM2 4
+#define NUM 5
+#define NAV 6
+#define BT 7
+#define FUN 8
 / { 
     combos {
         compatible = "zmk,combos";
-        combo_sys {
+
+
+// 3 KEY COMBOS
+        combo_fun {
+            timeout-ms = <30>;
+            key-positions = <0 1 2>;
+            bindings = <&sl FUN>;
+        };
+        combo_nav {
             timeout-ms = <30>;
             key-positions = <3 4 5>;
-            bindings = <&to SYS>;
+            bindings = <&to NAV>;
         };
         combo_caps {
             timeout-ms = <30>;
-            key-positions = <10 11 12>;
+            key-positions = <7 8 9>;
             bindings = <&caps_word>;
-        };
-        combo_num {
-            timeout-ms = <30>;
-            key-positions = <0 1 2>;
-            bindings = <&to NUM>;
         };
         combo_bt  {
             timeout-ms = <10>;
-            key-positions = <11 12>;
+            key-positions = <10 11 12>;
             bindings = <&to BT>;
             layers = <SM1>;
         };
-        combo_fun  {
-            timeout-ms = <10>;
+
+//  LEFT HAND COMBOS
+        combo_esc {
+            timeout-ms = <30>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+
+        combo_del {
+            timeout-ms = <30>;
+            key-positions = <1 2>;
+            bindings = <&kp DEL>;
+        };
+
+        combo_tab {
+            timeout-ms = <30>;
             key-positions = <7 8>;
-            bindings = <&to FUN>;
-            layers = <AL1>;
+            bindings = <&kp TAB>;
+        };
+
+        combo_lbkt {
+            timeout-ms = <30>;
+            key-positions = <0 7>;
+            bindings = <&kp LBKT>;
+        };
+        combo_lbrc {
+            timeout-ms = <30>;
+            key-positions = <1 8>;
+            bindings = <&kp LBRC>;
+        };
+        combo_lprn {
+            timeout-ms = <30>;
+            key-positions = <2 9>;
+            bindings = <&kp LPRN>;
+        };
+
+//  RIGHT HAND COMBOS
+        combo_bspc {
+            timeout-ms = <30>;
+            key-positions = <4 5>;
+            bindings = <&kp BSPC>;
+        };
+
+        combo_ent {
+            timeout-ms = <30>;
+            key-positions = <10 11>;
+            bindings = <&kp ENT>;
+        };
+
+        combo_rprn {
+            timeout-ms = <30>;
+            key-positions = <3 10>;
+            bindings = <&kp RPRN>;
+        };
+        combo_rbrc {
+            timeout-ms = <30>;
+            key-positions = <4 11>;
+            bindings = <&kp RBRC>;
+        };
+        combo_rbkt {
+            timeout-ms = <30>;
+            key-positions = <5 12>;
+            bindings = <&kp RBKT>;
         };
     };
 
@@ -67,7 +129,7 @@
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <3 4 5 10 11 12 13 14>; // right hand
+            // hold-trigger-key-positions = <3 4 5 10 11 12 13 14>; // right hand
         };
         hm_r: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
@@ -77,7 +139,7 @@
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-        hold-trigger-key-positions = <0 1 2 6 7 8 9>; // left hand
+            // hold-trigger-key-positions = <0 1 2 6 7 8 9>; // left hand
         };
         sr: shift_layer {
             compatible = "zmk,behavior-hold-tap";
@@ -97,7 +159,7 @@
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
-        hold-trigger-key-positions = <3 4 5 10 11 12 13 14>; // right hand
+            // hold-trigger-key-positions = <3 4 5 10 11 12 13 14>; // right hand
         };
         hl_r: homerow_layers_right {
             compatible = "zmk,behavior-hold-tap";
@@ -107,7 +169,7 @@
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
-        hold-trigger-key-positions = <0 1 2 6 7 8 9>; // left hand
+            // hold-trigger-key-positions = <0 1 2 6 7 8 9>; // left hand
         };
     td: tapdance {
             compatible = "zmk,behavior-hold-tap";
@@ -118,6 +180,24 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+    alpha2macro: behavior_macro_1 {
+        compatible = "zmk,behavior-macro";
+        label = "MACRO1";
+        #binding-cells = <0>;
+        bindings = < &sl AL2 >;
+      };
+    caps_alpha2macro: behavior_macro_2 {
+        compatible = "zmk,behavior-macro";
+        label = "MACRO2";
+        #binding-cells = <0>;
+        bindings = < &sl AL2U >;
+      };
+    arrow_fn: behavior_macro_3 {
+        compatible = "zmk,behavior-macro";
+        label = "MACRO2";
+        #binding-cells = <0>;
+        bindings = < &macro_tap &kp LPRN &kp RPRN &kp SPC &kp EQUAL &kp GT &kp SPC &kp LBRC &kp RBRC &kp LEFT>;
+      };
   };
 //                  0       1       2                   3       4           5
 //          6       7       8       9                   10      11          12          13
@@ -129,8 +209,8 @@
                 label = "Base";
         bindings = <
                             &hm_l LCTL L    &hm_l LALT G    &hm_l LGUI D                &hm_r RGUI H    &hm_r LALT U        &hm_r RCTL O
-            &hl_l NUM I     &hl_l SM2 S     &hl_l SM1 R     &hl_l SYS T                 &hl_r SYS N     &hl_r SM1 E         &hl_r SM2 A     &hl_r NUM C
-                                             &kp SPC        &sk LSHIFT                  &td LC(LS(LALT)) COMMA  &mo AL2
+            &hl_l NUM I     &hl_l SM2 S     &hl_l SM1 R     &hl_l LG(LC(LS(LALT))) T    &hl_r LC(LS(LALT)) N     &hl_r SM1 E         &hl_r SM2 A     &hl_r NUM C
+                                            &key_repeat     &lt NAV SPC                &caps_alpha2macro  &alpha2macro
         >;
         };
                 alpha2 {
@@ -138,24 +218,32 @@
         bindings = <
                     &kp V       &kp W               &kp M               &kp F       &kp SQT         &kp Z
         &kp Q       &kp J       &kp P               &kp K               &kp B       &kp DOT         &kp X       &kp Y
-                                &kp SPC             &sr LSHIFT AL1      &trans      &none
+                                &caps_word          &sk LSHIFT         &none        &sl A2U
         >;
         };
 
+                alpha2cap {
+                label = "Al2U";
+                bindings = <
+                    &kp LS(V)	  &kp LS(W)	     &kp LS(M)        	 	&kp LS(F)    	&trans		&kp LS(Z)	
+        &kp LS(Q) 	&kp LS(J) 	&kp LS(P)	     &kp LS(K)		        &kp LS(B)	    &kp COMMA	&kp LS(X)	&kp LS(Y) 
+                                &trans 		     &trans 			        &trans	      &none
+        >;
+        };
                 sym1 {
                 label = "Code";
         bindings = <
-                    &kp STAR    &kp LS(N3)  &kp DLLR                       &kp LS(COMMA)   &kp LS(DOT)     &kp MINUS
-        &kp BSLH   &kp GRAVE    &kp TILDE   &kp CARET                      &kp LBKT        &kp RBKT        &kp PIPE    &kp SLASH
-                                &trans      &sr LSHIFT AL1                 &kp LALT        &kp RGUI
+                    &kp DLLR    &kp GRAVE  &kp DQT                        &kp LT          &kp GT        &kp EQUAL
+        &kp COLON   &kp PIPE    &kp AMBS   &kp QMARK                      &kp EXCL        &arrow_fn     &kp MINUS    &kp SEMI
+                                &trans     &sr LSHIFT AL1                 &kp SQT         &kp COMMA
         >;
         };
         sym2 {
         label = "Punct";
         bindings = <
-                    &kp ATSN    &kp QMARK        &kp LA(N3)                &kp LPRN    &kp RPRN    &kp MINUS
-        &kp SEMI    &kp PRCNT   &kp EXCL         &kp LS(MINUS)             &kp LBRC    &kp RBRC    &kp AMPS    &kp COLON
-                                &trans          &sr LSHIFT AL1             &kp LALT    &kp RGUI
+                    &kp LPAR    &kp RPAR        &kp CARET                 &kp UNDER   &kp LA(3)    &kp PLUS
+        &kp MINUS   &kp LS(3)   &kp ATSN        &kp PRCNT                 &kp TILDE   &kp BSLH    &kp STAR    &kp SLASH
+                                &trans          &sr LSHIFT AL1            &trans      &trans
 
         >;
         };
@@ -163,18 +251,18 @@
         num {
         label = "Num";
         bindings = <
-                          &hm_l LCTL DOT      &hm_l LALT N0   &hm_l LGUI N1       &hm_r RGUI N2   &hm_r LALT N3    &hm_r RCTL N4
-        &td SLASH MINUS   &td STAR PLUS       &kp N5          &kp N6              &kp N7          &kp N8           &kp N9         &td COLON EQUAL
-                                              &trans          &sr LSHIFT AL1      &kp LALT        &kp RGUI
+                          &hm_l LCTL MINUS    &hm_l LALT N0   &hm_l LGUI N1       &hm_r RGUI N2   &hm_r LALT N3    &hm_r RCTL N4
+        &td SLASH MINUS   &td STAR PLUS       &kp N5          &kp N6              &kp N7          &kp N8           &kp N9         &kp EQUAL
+                                              &trans          &trans              &kp LALT        &kp RGUI
         >;
         };
 
-        sys {
+        nav {
         label = "Nav";
         bindings = <
-                            &kp ESC        &kp LG(LS(LBKT))    &kp LG(LS(RBKT))         &td LG(V) LG(C)     &td PG_UP UP    &kp BKSP
-        &td LG(GRAVE) TAB   &kp DEL        &td HOME LG(LBKT)   &td END LG(RBKT)         &kp LEFT            &td PG_DN DOWN  &kp RIGHT   &kp RET
-                                           &kp LCTL            &sr LSHIFT AL1           &kp LALT            &kp RGUI
+                            &none          &td LG(V) LG(C)        &kp PG_UP       &kp HOME  &kp UP    &kp END
+        &kp LG(LBKT)        &to AL1        &td LG(LS(4))          &kp PG_DN       &kp LEFT  &kp DOWN  &kp RIGHT   &kp LG(RBKT)
+                                           &none                  &none           &kp LGUI  &kp LSHIFT
         >;
         };
 
@@ -189,8 +277,8 @@
         fun {
         label = "Fn";
             bindings = <
-                     &kp F11   &kp F10   &kp F1           &kp F2   &kp F3   &kp F4
-     &kp C_VOL_DN    &kp F12   &kp F5    &kp F6           &kp F7   &kp F8   &kp F9  &kp C_VOL_UP
+                     &kp F1   &kp F2    &kp F3           &kp F4    &kp F5    &kp F6
+     &kp C_VOL_DN    &kp F7   &kp F8    &kp F9           &kp F10   &kp F11   &kp F12  &kp C_VOL_UP
                                &none     &to AL1          &none    &kp C_MUTE
                 >;
         };
