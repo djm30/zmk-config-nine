@@ -233,12 +233,13 @@
                 label = "Code";
         bindings = <
                     &kp DLLR    &kp GRAVE  &kp DQT                        &kp LT          &kp GT        &kp EQUAL
-        &kp COLON   &kp PIPE    &kp AMBS   &kp QMARK                      &kp EXCL        &kp GT        &kp MINUS    &kp SEMI
+        &kp COLON   &kp PIPE    &kp AMBS   &kp QMARK                      &kp EXCL        &arrow_fn     &kp MINUS  &kp SEMI
                                 &trans     &sr LSHIFT AL1                 &kp SQT         &kp COMMA
         >;
         };
-        sym2 {
-        label = "Punct";
+
+                sym2 {
+                label = "Punct";
         bindings = <
                     &kp LPAR    &kp RPAR        &kp CARET                 &kp UNDER   &kp LA(3)    &kp PLUS
         &kp MINUS   &kp LS(3)   &kp ATSN        &kp PRCNT                 &kp TILDE   &kp BSLH    &kp STAR    &kp SLASH
@@ -273,6 +274,7 @@
                                   &none         &to AL1                &none     &none
         >;
         };
+
         fun {
         label = "Fn";
             bindings = <
