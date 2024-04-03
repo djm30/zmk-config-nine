@@ -100,7 +100,7 @@
         combo_ent {
             timeout-ms = <30>;
             key-positions = <10 11>;
-            bindings = <&kp ENT>;
+            bindings = <&kp RET>;
         };
 
         combo_rprn {
