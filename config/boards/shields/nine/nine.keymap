@@ -194,7 +194,6 @@
       };
     arrow_fn: behavior_macro_3 {
         compatible = "zmk,behavior-macro";
-        label = "MACRO3";
         #binding-cells = <0>;
         bindings = < &macro_tap &kp LPRN &kp RPRN &kp SPC &kp EQUAL &kp GT &kp SPC &kp LBRC &kp RBRC &kp LEFT>;
       };
@@ -234,7 +233,7 @@
                 label = "Code";
         bindings = <
                     &kp DLLR    &kp GRAVE  &kp DQT                        &kp LT          &kp GT        &kp EQUAL
-        &kp COLON   &kp PIPE    &kp AMBS   &kp QMARK                      &kp EXCL        &arrow_fn     &kp MINUS    &kp SEMI
+        &kp COLON   &kp PIPE    &kp AMBS   &kp QMARK                      &kp EXCL        &kp GT        &kp MINUS    &kp SEMI
                                 &trans     &sr LSHIFT AL1                 &kp SQT         &kp COMMA
         >;
         };
