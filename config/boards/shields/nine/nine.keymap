@@ -233,7 +233,7 @@
                 label = "Code";
         bindings = <
                     &kp DLLR    &kp GRAVE  &kp DQT                        &kp LT          &kp GT        &kp EQUAL
-        &kp COLON   &kp PIPE    &kp AMBS   &kp QMARK                      &kp EXCL        &arrow_fn     &kp MINUS  &kp SEMI
+        &kp COLON   &kp PIPE    &kp AMBS   &kp QMARK                      &kp EXCL        &kp MINUS     &kp MINUS  &kp SEMI
                                 &trans     &sr LSHIFT AL1                 &kp SQT         &kp COMMA
         >;
         };
