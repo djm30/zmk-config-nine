@@ -196,11 +196,6 @@
         #binding-cells = <0>;
         bindings = < &sl A2U >;
       };
-    arrow_fn: behavior_macro_3 {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = < &macro_tap &kp LPRN &kp RPRN &kp SPC &kp EQUAL &kp GT &kp SPC &kp LBRC &kp RBRC &kp LEFT>;
-      };
   };
 
 
@@ -236,7 +231,7 @@
                 sym1 {
         bindings = <
                     &kp DLLR    &kp GRAVE  &kp DQT                        &kp LT          &kp GT        &kp EQUAL
-        &kp COLON   &kp PIPE    &kp AMPS   &kp QMARK                      &kp EXCL        &arrow_fn     &kp MINUS  &kp SEMI
+        &kp COLON   &kp PIPE    &kp AMPS   &kp QMARK                      &kp EXCL        &kp GT     &kp MINUS  &kp SEMI
                                 &trans     &sr LSHIFT AL1                 &kp SQT         &kp COMMA
         >;
         };
