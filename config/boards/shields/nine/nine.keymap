@@ -34,7 +34,6 @@
         compatible = "zmk,combos";
 
 
-// 3 KEY COMBOS
         combo_fun {
             timeout-ms = <30>;
             key-positions = <0 1 2>;
@@ -57,7 +56,6 @@
             layers = <SM1>;
         };
 
-//  LEFT HAND COMBOS
         combo_esc {
             timeout-ms = <30>;
             key-positions = <0 1>;
@@ -92,7 +90,6 @@
             bindings = <&kp LPAR>;
         };
 
-//  RIGHT HAND COMBOS
         combo_bspc {
             timeout-ms = <30>;
             key-positions = <4 5>;
@@ -125,27 +122,22 @@
     behaviors {
         hm_l: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_L";
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-            // hold-trigger-key-positions = <3 4 5 10 11 12 13 14>; // right hand
         };
         hm_r: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_R";
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-            // hold-trigger-key-positions = <0 1 2 6 7 8 9>; // left hand
         };
         sr: shift_layer {
             compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT_LAYER";
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             quick_tap_ms = <0>;
@@ -155,27 +147,22 @@
         };
         hl_l: homerow_layers_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_LAYERS_L";
             #binding-cells = <2>;
             tapping-term-ms = <220>;
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
-            // hold-trigger-key-positions = <3 4 5 10 11 12 13 14>; // right hand
         };
         hl_r: homerow_layers_right {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_LAYERS_R";
             #binding-cells = <2>;
             tapping-term-ms = <220>;
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
-            // hold-trigger-key-positions = <0 1 2 6 7 8 9>; // left hand
         };
     td: tapdance {
             compatible = "zmk,behavior-hold-tap";
-            label = "TAPDANCE";
             #binding-cells = <2>;
             tapping-term-ms = <190>;
             quick-tap-ms = <250>;
@@ -219,7 +206,6 @@
         >;
         };
                 alpha2 {
-                label = "Al2";
         bindings = <
                     &kp V       &kp W               &kp M               &kp F       &kp SQT         &kp Z
         &kp Q       &kp J       &kp P               &kp K               &kp B       &kp DOT         &kp X       &kp Y
