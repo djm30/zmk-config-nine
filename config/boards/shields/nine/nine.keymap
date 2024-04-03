@@ -182,13 +182,11 @@
         };
     alpha2macro: behavior_macro_1 {
         compatible = "zmk,behavior-macro";
-        label = "MACRO1";
         #binding-cells = <0>;
         bindings = < &sl AL2 >;
       };
     caps_alpha2macro: behavior_macro_2 {
         compatible = "zmk,behavior-macro";
-        label = "MACRO2";
         #binding-cells = <0>;
         bindings = < &sl A2U >;
       };
@@ -205,7 +203,6 @@
                 compatible = "zmk,keymap";
                 
                 alpha1 {
-                label = "Base";
         bindings = <
                             &hm_l LCTL L    &hm_l LALT G    &hm_l LGUI D                &hm_r RGUI H    &hm_r LALT U        &hm_r RCTL O
             &hl_l NUM I     &hl_l SM2 S     &hl_l SM1 R     &hl_l LG(LC(LS(LALT))) T    &hl_r LC(LS(LALT)) N     &hl_r SM1 E         &hl_r SM2 A     &hl_r NUM C
@@ -222,7 +219,6 @@
         };
 
                 alpha2cap {
-                label = "Al2U";
                 bindings = <
                     &kp LS(V)	  &kp LS(W)	     &kp LS(M)        	 	&kp LS(F)    	&trans		&kp LS(Z)	
         &kp LS(Q) 	&kp LS(J) 	&kp LS(P)	     &kp LS(K)		        &kp LS(B)	    &kp COMMA	&kp LS(X)	&kp LS(Y) 
@@ -230,7 +226,6 @@
         >;
         };
                 sym1 {
-                label = "Code";
         bindings = <
                     &kp DLLR    &kp GRAVE  &kp DQT                        &kp LT          &kp GT        &kp EQUAL
         &kp COLON   &kp PIPE    &kp AMPS   &kp QMARK                      &kp EXCL        &arrow_fn     &kp MINUS  &kp SEMI
@@ -239,7 +234,6 @@
         };
 
                 sym2 {
-                label = "Punct";
         bindings = <
                     &kp LPAR    &kp RPAR        &kp CARET                 &kp UNDER   &kp LA(3)    &kp PLUS
         &kp MINUS   &kp LS(3)   &kp ATSN        &kp PRCNT                 &kp TILDE   &kp BSLH    &kp STAR    &kp SLASH
@@ -249,7 +243,6 @@
         };
 
         num {
-        label = "Num";
         bindings = <
                           &hm_l LCTL MINUS    &hm_l LALT N0   &hm_l LGUI N1       &hm_r RGUI N2   &hm_r LALT N3    &hm_r RCTL N4
         &td SLASH MINUS   &td STAR PLUS       &kp N5          &kp N6              &kp N7          &kp N8           &kp N9         &kp EQUAL
@@ -258,7 +251,6 @@
         };
 
         nav {
-        label = "Nav";
         bindings = <
                             &none          &td LG(V) LG(C)        &kp PG_UP       &kp HOME  &kp UP    &kp END
         &kp LG(LBKT)        &to AL1        &td LG(LS(4))          &kp PG_DN       &kp LEFT  &kp DOWN  &kp RIGHT   &kp LG(RBKT)
@@ -267,7 +259,6 @@
         };
 
         bt {
-        label = "BT";
         bindings = <
                   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2           &bt BT_SEL 3     &bt BT_SEL 4   &trans
         &trans    &sys_reset      &trans        &bootloader            &bootloader      &trans         &sys_reset  &bt BT_CLR
@@ -276,7 +267,6 @@
         };
 
         fun {
-        label = "Fn";
             bindings = <
                      &kp F1   &kp F2    &kp F3           &kp F4    &kp F5    &kp F6
      &kp C_VOL_DN    &kp F7   &kp F8    &kp F9           &kp F10   &kp F11   &kp F12  &kp C_VOL_UP
