@@ -248,7 +248,7 @@
         nav {
         bindings = <
                             &none          &td LG(V) LG(C)        &kp PG_UP       &kp HOME  &kp UP    &kp END
-        &kp LG(LBKT)        &to AL1        &td LG(LS(4))          &kp PG_DN       &kp LEFT  &kp DOWN  &kp RIGHT   &kp LG(RBKT)
+        &kp LG(LBKT)        &to AL1        &td LG(LS(NUMBER_4))   &kp PG_DN       &kp LEFT  &kp DOWN  &kp RIGHT   &kp LG(RBKT)
                                            &none                  &none           &kp LGUI  &kp LSHIFT
         >;
         };
