@@ -89,7 +89,7 @@
         combo_lprn {
             timeout-ms = <30>;
             key-positions = <2 9>;
-            bindings = <&kp LPRN>;
+            bindings = <&kp LPAR>;
         };
 
 //  RIGHT HAND COMBOS
@@ -108,7 +108,7 @@
         combo_rprn {
             timeout-ms = <30>;
             key-positions = <3 10>;
-            bindings = <&kp RPRN>;
+            bindings = <&kp RPAR>;
         };
         combo_rbrc {
             timeout-ms = <30>;
