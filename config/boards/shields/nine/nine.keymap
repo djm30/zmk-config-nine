@@ -247,11 +247,13 @@
 
         nav {
         bindings = <
-                            &none          &td LG(V) LG(C)        &kp PG_UP       &kp HOME  &kp UP    &kp END
-        &kp LG(LBKT)        &to AL1        &td LG(LS(NUMBER_4))   &kp PG_DN       &kp LEFT  &kp DOWN  &kp RIGHT   &kp LG(RBKT)
-                                           &none                  &none           &kp LGUI  &kp LSHIFT
+                    &kp LPAR    &kp RPAR        &kp CARET                 &kp UNDER   &kp LA(3)    &kp PLUS
+        &kp MINUS   &kp LS(3)   &kp ATSN        &kp PRCNT                 &kp TILDE   &kp BSLH    &kp STAR    &kp SLASH
+                                &trans          &sr LSHIFT AL1            &trans      &trans
+
         >;
         };
+
 
         bt {
         bindings = <
