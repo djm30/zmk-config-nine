@@ -190,11 +190,11 @@
         compatible = "zmk,behavior-macro";
         label = "MACRO2";
         #binding-cells = <0>;
-        bindings = < &sl AL2U >;
+        bindings = < &sl A2U >;
       };
     arrow_fn: behavior_macro_3 {
         compatible = "zmk,behavior-macro";
-        label = "MACRO2";
+        label = "MACRO3";
         #binding-cells = <0>;
         bindings = < &macro_tap &kp LPRN &kp RPRN &kp SPC &kp EQUAL &kp GT &kp SPC &kp LBRC &kp RBRC &kp LEFT>;
       };
