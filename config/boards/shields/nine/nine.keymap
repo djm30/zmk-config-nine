@@ -223,8 +223,8 @@
 
                 alpha2cap {
                 bindings = <
-                    &kp LS(V)	  &kp LS(W)	     &kp LS(M)        	 	&kp LS(F)    	&trans		&kp LS(Z)	
-        &kp LS(Q) 	&kp LS(J) 	&kp LS(P)	     &kp LS(K)		        &kp LS(B)	    &kp COMMA	&kp LS(X)	&kp LS(Y) 
+                    &kp LS(V)	&kp LS(W)	     &kp LS(P)        	 	&kp LS(M)    	&kp LS(J)   &kp LS(F)	
+        &kp LS(Q) 	&kp LS(Z) 	&kp LS(X)	     &kp LS(B)		        &kp LS(K)	    &kp COMMA	&kp LS(Y)	&kp DQT
                                 &trans 		     &trans 			        &trans	      &none
         >;
         };
