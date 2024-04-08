@@ -53,7 +53,6 @@
             timeout-ms = <10>;
             key-positions = <10 11 12>;
             bindings = <&to BT>;
-            layers = <SM1>;
         };
 
         combo_esc {
@@ -169,6 +168,15 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+    shrep: shift_repeat {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFT_REPEAT";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&key_repeat>;
+        };
   };
 
   macros {
@@ -200,15 +208,15 @@
                 
                 alpha1 {
         bindings = <
-                            &hm_l LCTL L    &hm_l LALT G    &hm_l LGUI D                &hm_r RGUI H    &hm_r LALT U        &hm_r RCTL O
-            &hl_l NUM I     &hl_l SM2 S     &hl_l SM1 R     &hm_l LG(LC(LS(LALT))) T    &hm_r LC(LS(LALT)) N     &hl_r SM1 E         &hl_r SM2 A     &hl_r NUM C
-                                            &hl_l NAV SPC     &key_repeat                 &caps_alpha2macro  &alpha2macro
+                            &hm_l LCTL L    &hm_l LALT G    &hm_l LGUI D                &hm_r RGUI H    &hm_r LALT U        &hm_r RCTL C
+            &hl_l NUM A     &hl_l SM2 R     &hl_l SM1 S     &hm_l LG(LC(LS(LALT))) T    &hm_r LC(LS(LALT)) N     &hl_r SM1 E         &hl_r SM2 I     &hl_r NUM O
+                                            &hl_l NAV SPC   &shrep LSHIFT 0             &caps_alpha2macro  &alpha2macro
         >;
         };
                 alpha2 {
         bindings = <
-                    &kp V       &kp W               &kp M               &kp F       &kp SQT         &kp Z
-        &kp Q       &kp J       &kp P               &kp K               &kp B       &kp DOT         &kp X       &kp Y
+                    &kp V       &kp W               &kp P               &kp M       &kp J           &kp F
+        &kp Q       &kp Z       &kp X               &kp B               &kp K       &kp SQT         &kp Y       &kp DOT
                                 &sk LSHIFT          &caps_word          &none       &sl A2U
         >;
         };
@@ -257,7 +265,7 @@
         bindings = <
                   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2           &bt BT_SEL 3     &bt BT_SEL 4   &trans
         &trans    &sys_reset      &trans        &bootloader            &bootloader      &trans         &sys_reset  &bt BT_CLR
-                                  &none         &to AL1                &none     &none
+                                  &to AL1       &to AL1                &to AL1          &to AL1    
         >;
         };
 
