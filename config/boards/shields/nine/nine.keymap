@@ -50,8 +50,8 @@
             bindings = <&caps_word>;
         };
         combo_bt  {
-            timeout-ms = <10>;
-            key-positions = <10 11 12>;
+            timeout-ms = <25>;
+            key-positions = <6 13>;
             bindings = <&to BT>;
         };
 
@@ -210,7 +210,7 @@
         bindings = <
                             &hm_l LCTL L    &hm_l LALT G    &hm_l LGUI D                &hm_r RGUI H    &hm_r LALT U        &hm_r RCTL C
             &hl_l NUM A     &hl_l SM2 R     &hl_l SM1 S     &hm_l LG(LC(LS(LALT))) T    &hm_r LC(LS(LALT)) N     &hl_r SM1 E         &hl_r SM2 I     &hl_r NUM O
-                                            &hl_l NAV SPC   &shrep LSHIFT 0             &caps_alpha2macro  &alpha2macro
+                                            &hl_l NAV SPC   &keyrepeat                  &caps_alpha2macro  &alpha2macro
         >;
         };
                 alpha2 {
@@ -223,8 +223,8 @@
 
                 alpha2cap {
                 bindings = <
-                    &kp LS(V)	&kp LS(W)	     &kp LS(P)        	 	&kp LS(M)    	&kp LS(J)   &kp LS(F)	
-        &kp LS(Q) 	&kp LS(Z) 	&kp LS(X)	     &kp LS(B)		        &kp LS(K)	    &kp COMMA	&kp LS(Y)	&kp DQT
+                    &kp LS(V)	  &kp LS(W)	     &kp LS(P)        	 	&kp LS(M)    	&kp LS(J)   &kp LS(F)	
+        &kp LS(Q) 	&kp LS(Z) 	&kp LS(X)	     &kp LS(B)		        &kp LS(K)	    &kp COMMA	  &kp LS(Y)	  &kp DQT
                                 &trans 		     &trans 			        &trans	      &none
         >;
         };
