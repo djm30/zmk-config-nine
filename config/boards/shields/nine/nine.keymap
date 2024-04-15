@@ -210,7 +210,7 @@
         bindings = <
                             &hm_l LCTL L    &hm_l LALT G    &hm_l LGUI D                &hm_r RGUI H    &hm_r LALT U        &hm_r RCTL C
             &hl_l NUM A     &hl_l SM2 R     &hl_l SM1 S     &hm_l LG(LC(LS(LALT))) T    &hm_r LC(LS(LALT)) N     &hl_r SM1 E         &hl_r SM2 I     &hl_r NUM O
-                                            &hl_l NAV SPC   &keyrepeat                  &caps_alpha2macro  &alpha2macro
+                                            &hl_l NAV SPC   &key_repeat                  &caps_alpha2macro  &alpha2macro
         >;
         };
                 alpha2 {
