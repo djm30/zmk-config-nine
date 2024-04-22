@@ -35,40 +35,40 @@
 
 
         combo_fun {
-            timeout-ms = <30>;
+            timeout-ms = <40>;
             key-positions = <0 1 2>;
             bindings = <&sl FUN>;
         };
         combo_nav {
-            timeout-ms = <30>;
+            timeout-ms = <40>;
             key-positions = <3 4 5>;
             bindings = <&to NAV>;
         };
         combo_caps {
-            timeout-ms = <30>;
+            timeout-ms = <40>;
             key-positions = <7 8 9>;
             bindings = <&caps_word>;
         };
         combo_bt  {
-            timeout-ms = <25>;
+            timeout-ms = <50>;
             key-positions = <6 13>;
             bindings = <&to BT>;
         };
 
         combo_esc {
-            timeout-ms = <30>;
+            timeout-ms = <35>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
 
         combo_del {
-            timeout-ms = <30>;
+            timeout-ms = <35>;
             key-positions = <1 2>;
             bindings = <&kp DEL>;
         };
 
         combo_tab {
-            timeout-ms = <30>;
+            timeout-ms = <35>;
             key-positions = <7 8>;
             bindings = <&kp TAB>;
         };
